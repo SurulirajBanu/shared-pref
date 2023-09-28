@@ -1,12 +1,12 @@
 class User {
   /// Name of the user
-  String name;
+  String? name;
 
   /// Email ID of the user
   String email;
 
   /// Constructor
-  User({required this.name, required this.email});
+  User({this.name, required this.email});
 
   /// [fromJson] method to parse [json] value from API into [User] object
   factory User.fromJson(Map<String, dynamic>? json) {
