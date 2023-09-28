@@ -42,6 +42,9 @@ class Prefs {
 
   static Future<bool> clear() async => await _prefs.clear();
 
+
+  /// Getters and Setters for Objects stored in Shared preferences
+
   static User get user {
     Map<String, dynamic> json = jsonDecode(getString('user') ?? '');
     return User.fromJson(json);

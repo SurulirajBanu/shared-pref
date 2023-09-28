@@ -4,7 +4,9 @@ import 'package:shared_pref_play/util/prefs.dart';
 import 'package:shared_pref_play/user/user_model.dart';
 
 Future<void> main() async {
+  // Ensure Widgets are initialized
   WidgetsFlutterBinding.ensureInitialized();
+  // Initialize Shared preferences
   await Prefs.init();
   runApp(const MyApp());
 }
@@ -54,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            UserWidget(),
+            UserWidget(), // The User information widget is added here
             Padding(
               padding: const EdgeInsets.all(20),
               child: TextField(
